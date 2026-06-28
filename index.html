@@ -1,42 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Weather Dashboard</title>
+    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="dashboard-container">
-        <h2>Live Weather Dashboard</h2>
-        
-        <div class="search-box">
-            <input type="text" id="city-input" placeholder="Enter city name... (e.g., London)">
-            <button id="search-btn">Search</button>
-        </div>
+<div class="container">
+    <h1>Weather Dashboard</h1>
 
-        <div id="weather-result" class="weather-result hidden">
-            <h3 id="location-name">City Name</h3>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <span class="label">Temperature</span>
-                    <span class="value" id="temp-val">--</span>
-                </div>
-                <div class="metric-card">
-                    <span class="label">Humidity</span>
-                    <span class="value" id="humidity-val">--</span>
-                </div>
-                <div class="metric-card">
-                    <span class="label">Wind Speed</span>
-                    <span class="value" id="wind-val">--</span>
-                </div>
-            </div>
-        </div>
+    <input type="text" id="city" placeholder="Enter City Name">
+    <button onclick="getWeather()">Search</button>
 
-        <p id="error-message" class="error-msg hidden"></p>
-    </div>
+    <div id="weatherResult"></div>
+</div>
 
-    <script src="app.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
